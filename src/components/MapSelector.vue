@@ -1,6 +1,6 @@
 <template>
   <div style="height: 700px; width: 1400px">
-    <l-map ref="map" v-model:zoom="zoom" :center="[47.41322, -1.219482]">
+    <l-map ref="map" v-model:zoom="zoom" :center="position">
       <l-tile-layer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         layer-type="base"
@@ -23,8 +23,9 @@ export default defineComponent({
   },
 
   setup() {
-    const zoom = 2;
-    return { zoom };
+    const zoom = 7;
+    const position = [56.1572, 10.2107];
+    return { zoom, position };
   },
 });
 </script>
